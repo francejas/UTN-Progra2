@@ -115,9 +115,10 @@ public class Main {
         System.out.println("Velocidad ingresada: " + velocidadKm + " Km/h");
         System.out.printf("Velocidad en m/s: %.2f m/s\n", velocidadMS);
          */
-*/
+
 
         /// 8
+        /*
         System.out.print("Ingrese un número de 3 cifras: ");
         int numero = scanner.nextInt();
         scanner.nextLine();
@@ -130,10 +131,68 @@ public class Main {
         System.out.println("Centenas: " + centenas);
         System.out.println("Decenas: " + decenas);
         System.out.println("Unidades: " + unidades);
-
+*/
         /// 9
+        /*
+        System.out.print("Ingrese un numero de 5 cifras: ");
+        int numero= scanner.nextInt();
+        scanner.nextLine();
+        String string = String.valueOf(numero);
+
+        for (int i = 0; i < string.length(); i++) {
+            if(i %2 == 0){
+                System.out.println(string.charAt(i));
+            }
+        }
+        */
+
+        /// 10
+        /*
+        System.out.println("Ingrese Hora: ");
+
+        int hora= scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Ingrese Minutos: ");
+        int minutos= scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Ingrese Segundos: ");
+        int segundos= scanner.nextInt();
+        scanner.nextLine();
+
+        if ((hora>0 && hora<24) && (minutos<60&&minutos>=0) && (segundos>=0 && segundos <60)) {
+            System.out.print("La hora es valida.");
+        }
+            */
+
+        /// 11
+        System.out.println("Ingrese nombre: ");
+        String nombre=scanner.nextLine();
+        System.out.println("Ingrese edad: ");
+        int edad= scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese salario: ");
+        double salario= scanner.nextDouble();
+        scanner.nextLine();
+        double salarioFinal;
+        if(edad>16){
+            if(edad>=19 && edad<=50){
+                salarioFinal=salario+salario*0.5;
+            }
+            if (edad>=51&&edad<=60){
+                salarioFinal=salario+salario*0.10;
+            }
+            if (edad>=60){
+                salarioFinal=salario+salario*0.15;
+            }
+        } else {
+            System.out.println(nombre + " no tiene edad para trabajar.");
+        }
+
 
 
 
     }
+}
 }
