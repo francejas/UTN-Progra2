@@ -1,111 +1,148 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        /// 1
-/*
-
-
-
-        System.out.print("Ingrese un valor: ");
-        int N = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("N= " + N);
-        System.out.println("N incrementado en 77= " +(N+77));
-        int aux;
-        aux=N;
-        N=3;
-        System.out.println("N reducido a 3= " +N);
-        aux=aux*2;
-        N=aux;
-        System.out.println("N duplicado= " +N);
-*/
-        /// 2
+        ///Ejercicio 1
         /*
-        System.out.print("Ingrese un valor: ");
-        int A= scanner.nextInt();
-        scanner.nextLine();
-        if(A % 2 == 0){
-            System.out.println("A= " +A + " es par");
-        } else {
-            System.out.println("A= " +A +" es impar");
-        }
-*/
-        /// 3
-        /*
-        System.out.print("Ingrese un valor: ");
-        int B=scanner.nextInt();
-        scanner.nextLine();
+        int numN = 10;
+        double numA = 10.4;
+        char numC = 'c';
 
-        if(B>=0){
-            System.out.println("B= " +B + " es postivo");
-        }else {
-            System.out.println("B= " +B + " es negativo");
-        }
-        */
 
-        /// 4
-        /*
-        System.out.print("Ingrese un caracter: ");
 
-        char character = scanner.next().charAt(0);
-        int asciiValor=character;
-        System.out.println("Valor ASCII de " + character + " es: " +asciiValor);
-        */
-
-        /// 5
-        /*
-        System.out.print("Ingrese un valor: ");
-        int C= scanner.nextInt();
-        scanner.nextLine();
-        if(C>=0){
-            System.out.println("C= " +C + " es positivo");
-        }else {
-            System.out.println("C= " +C + " es negativo");
-        }
-
-        if (C % 2==0){
-            System.out.println("C= " +C + " es par");
-        }else {
-            System.out.println("C= " +C + " es impar");
-        }
-
-        if (C % 5==0){
-            System.out.println("C= " +C + " es multiplo de 5");
-        }else {
-            System.out.println("C= " +C + " no es multiplo de 5");
-        }
-        if (C % 10==0){
-            System.out.println("C= " +C + " es multiplo de 10");
-        }else {
-            System.out.println("C= " +C + " no es multiplo de 10");
-        }
-
-        if (C>100){
-            System.out.println("C= " +C + " es mayor a 100");
-        }else {
-            System.out.println("C= " +C + " es menor a 100");
-        }
+        System.out.println("Valor de numN: " + numN);
+        System.out.println("Valor de numA: " + numA);
+        System.out.println("Valor de numC: " + numC);
+        System.out.println("numN + numA = " + numN + " + " + numA + " = " + (numN + numA));
+        System.out.printf("numN + numA = %d + %.2f = %.2f%n", numN, numA, numN + numA);
+        System.out.println("numA - numN = " + numA + " - " + numN + " = " + (numA-numN));
+        System.out.printf("numA - numN = %.2f - %d = %.2f%n",numA, numN,(numA-numN));
+        System.out.println("numC = "+ numC);
+        System.out.printf("numC = %c",numC);
 
          */
 
-        /// 6
-        System.out.print("Ingrese su nombre: ");
-        String nombre = scanner.nextLine();
-        System.out.println("Buenos dias, " + nombre);
 
-        /// 7
+        ///Ejercicio 2
 
-        System.out.print("Ingrese velocidad: ");
-        int velocidadKm= scanner.nextInt();
-        scanner.nextLine();
-        int velocidadMS=velocidadKm*1000/3600;
-        System.out.println("Velocidad ingresada: " + velocidadKm);
-        System.out.println("Velocidad cambiada: " + velocidadMS);
+        /*
 
+        // Variables enteras
+        int numX = 8;
+        int numY = 3;
+
+        // Variables decimales
+        double numN = 5.5;
+        double numM = 2.2;
+
+        // Operaciones con numX y numY
+        System.out.println("numX + numY = " + (numX + numY));
+        System.out.println("numX - numY = " + (numX - numY));
+        System.out.println("numX * numY = " + (numX * numY));
+        System.out.println("numX / numY = " + (numX / numY));  // División entera
+        System.out.println("numX % numY = " + (numX % numY));  // Resto
+
+        // Operaciones con numN y numM
+        System.out.println("numN + numM = " + (numN + numM));
+        System.out.println("numN - numM = " + (numN - numM));
+        System.out.println("numN * numM = " + (numN * numM));
+        System.out.println("numN / numM = " + (numN / numM));
+        System.out.println("numN % numM = " + (numN % numM));
+
+        // Operaciones combinadas
+        System.out.println("numX + numN = " + (numX + numN));
+        System.out.println("numY * numM = " + (numY * numM));
+        System.out.println("numX / numM = " + (numX / numM));
+        System.out.println("numN / numY = " + (numN / numY));
+
+        */
+
+        ///Ejercicio 3
+/*
+        // Declarar y asignar valores
+        int A = 1;
+        int B = 2;
+        int C = 3;
+        int D = 4;
+
+        System.out.println("Valores iniciales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
+
+        // Guardar los valores originales en variables temporales
+        int tempB = B; // Guarda valor original de B
+        int tempC = C; // Guarda valor original de C
+        int tempA = A; // Guarda valor original de A
+        int tempD = D; // Guarda valor original de D
+
+        // Reasignaciones según lo pedido
+        B = tempC; // B toma el valor de C (original)
+        C = tempA; // C toma el valor de A (original)
+        A = tempD; // A toma el valor de D (original)
+        D = tempB; // D toma el valor de B (original)
+
+        System.out.println("\nValores finales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
+
+
+*/
+/*
+        // Declarar y asignar valores
+        int A = 1;
+        int B = 2;
+        int C = 3;
+        int D = 4;
+
+        System.out.println("Valores iniciales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
+
+        // Variable auxiliar
+        int aux;
+
+        // B toma el valor de C
+        aux = C;
+        B = aux;
+
+        // C toma el valor de A
+        aux = A;
+        C = aux;
+
+        // A toma el valor de D
+        aux = D;
+        A = aux;
+
+        // D toma el valor de B (usamos el valor nuevo de B)
+        aux = B;
+        D = aux;
+
+        System.out.println("\nValores finales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
+
+ */
+
+        int A = 1;
+        int B = 2;
+        int C = 3;
+        int D = 4;
+
+        System.out.println("Valores iniciales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
+
+        // Guardar valor original de B
+        int originalB = B;
+
+        // B toma el valor de C
+        B = C;
+
+        // C toma el valor de A
+        C = A;
+
+        // A toma el valor de D
+        A = D;
+
+        // D toma el valor original de B
+        D = originalB;
+
+        System.out.println("\nValores finales:");
+        System.out.println("A = " + A + ", B = " + B + ", C = " + C + ", D = " + D);
 
 
     }
