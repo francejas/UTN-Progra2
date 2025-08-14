@@ -93,18 +93,45 @@ public class Main {
          */
 
         /// 6
+        /*
         System.out.print("Ingrese su nombre: ");
         String nombre = scanner.nextLine();
         System.out.println("Buenos dias, " + nombre);
+        */
 
         /// 7
-
-        System.out.print("Ingrese velocidad: ");
-        int velocidadKm= scanner.nextInt();
+/*
+        System.out.print("Ingrese velocidad en Km/h: ");
+        double velocidadKm = scanner.nextDouble();
         scanner.nextLine();
-        int velocidadMS=velocidadKm*1000/3600;
-        System.out.println("Velocidad ingresada: " + velocidadKm);
-        System.out.println("Velocidad cambiada: " + velocidadMS);
+
+        double velocidadMS = velocidadKm * 1000 / 3600;
+
+        System.out.println("Velocidad ingresada: " + velocidadKm + " Km/h");
+        System.out.println("Velocidad en m/s: " + velocidadMS + " m/s");
+
+        //Con 2 decimales
+        /*
+        System.out.println("Velocidad ingresada: " + velocidadKm + " Km/h");
+        System.out.printf("Velocidad en m/s: %.2f m/s\n", velocidadMS);
+         */
+*/
+
+        /// 8
+        System.out.print("Ingrese un número de 3 cifras: ");
+        int numero = scanner.nextInt();
+        scanner.nextLine();
+        // Extraer cifras
+        int centenas = numero / 100;              // primer dígito
+        int decenas = (numero / 10) % 10;          // segundo dígito
+        int unidades = numero % 10;                // tercer dígito
+
+        // Mostrar resultados
+        System.out.println("Centenas: " + centenas);
+        System.out.println("Decenas: " + decenas);
+        System.out.println("Unidades: " + unidades);
+
+        /// 9
 
 
 
