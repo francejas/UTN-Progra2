@@ -57,7 +57,7 @@ public class Main {
         */
 
         /// 5
-        /*
+/*
         System.out.print("Ingrese un valor: ");
         int C= scanner.nextInt();
         scanner.nextLine();
@@ -90,7 +90,31 @@ public class Main {
             System.out.println("C= " +C + " es menor a 100");
         }
 
-         */
+ */
+
+        /// 5 optimizado
+        /*
+        System.out.print("Ingrese un valor: ");
+        int C= scanner.nextInt();
+        scanner.nextLine();
+
+        //Positivo o negativo
+        String signo = (C>=0) ? "positivo":"negativo";
+
+        //Par o impar
+        String paridad = (C % 2 == 0) ? "par" : "impar";
+
+        // Múltiplos
+        String multiplo5 = (C % 5 == 0) ? "es múltiplo de 5" : "no es múltiplo de 5";
+        String multiplo10 = (C % 10 == 0) ? "es múltiplo de 10" : "no es múltiplo de 10";
+
+        // Mayor o menor que 100
+        String comparacion100 = (C > 100) ? "mayor a 100" : "menor a 100";
+
+        // Mostrar todo junto
+        System.out.println("C = " + C + ": " + signo + ", " + paridad + ", " + multiplo5 + ", " + multiplo10 + ", " + comparacion100);
+        */
+
 
         /// 6
         /*
@@ -111,11 +135,11 @@ public class Main {
         System.out.println("Velocidad en m/s: " + velocidadMS + " m/s");
 
         //Con 2 decimales
-        /*
+
         System.out.println("Velocidad ingresada: " + velocidadKm + " Km/h");
         System.out.printf("Velocidad en m/s: %.2f m/s\n", velocidadMS);
-         */
 
+*/
 
         /// 8
         /*
@@ -133,66 +157,148 @@ public class Main {
         System.out.println("Unidades: " + unidades);
 */
         /// 9
-        /*
+/*
         System.out.print("Ingrese un numero de 5 cifras: ");
+
         int numero= scanner.nextInt();
         scanner.nextLine();
+
         String string = String.valueOf(numero);
+        //tambien puede ser
+        String string = Integer.toString(numero);
 
         for (int i = 0; i < string.length(); i++) {
             if(i %2 == 0){
                 System.out.println(string.charAt(i));
             }
         }
-        */
 
-        /// 10
-        /*
-        System.out.println("Ingrese Hora: ");
 
-        int hora= scanner.nextInt();
+        System.out.print("Ingrese un numero de 5 cifras: ");
+        int numero= scanner.nextInt();
         scanner.nextLine();
+
+        Integer n = numero;
+
+        String string = Integer.toString(n);
+
+        String string = String.valueOf(numero);
+        //tambien puede ser
+        String string = Integer.toString(numero);
+
+        for (int i = 0; i < string.length(); i++) {
+            if(i %2 == 0){
+                System.out.println(string.charAt(i));
+            }
+        }
+*/
+        /// 10
+/*
+        System.out.println("Ingrese Hora: ");
+        int hora = scanner.nextInt();
 
         System.out.println("Ingrese Minutos: ");
-        int minutos= scanner.nextInt();
-        scanner.nextLine();
+        int minutos = scanner.nextInt();
 
         System.out.println("Ingrese Segundos: ");
-        int segundos= scanner.nextInt();
-        scanner.nextLine();
+        int segundos = scanner.nextInt();
 
-        if ((hora>0 && hora<24) && (minutos<60&&minutos>=0) && (segundos>=0 && segundos <60)) {
-            System.out.print("La hora es valida.");
-        }
-            */
-
-        /// 11
-        System.out.println("Ingrese nombre: ");
-        String nombre=scanner.nextLine();
-        System.out.println("Ingrese edad: ");
-        int edad= scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Ingrese salario: ");
-        double salario= scanner.nextDouble();
-        scanner.nextLine();
-        double salarioFinal;
-        if(edad>16){
-            if(edad>=19 && edad<=50){
-                salarioFinal=salario+salario*0.5;
-            }
-            if (edad>=51&&edad<=60){
-                salarioFinal=salario+salario*0.10;
-            }
-            if (edad>=60){
-                salarioFinal=salario+salario*0.15;
-            }
+        if ((hora >= 0 && hora < 24) &&
+                (minutos >= 0 && minutos < 60) &&
+                (segundos >= 0 && segundos < 60)) {
+            System.out.println("La hora es válida.");
         } else {
-            System.out.println(nombre + " no tiene edad para trabajar.");
+            System.out.println("La hora NO es válida.");
         }
 
+*/
+        /// 11
+        /*
+        System.out.println("Ingrese nombre: ");
+String nombre = scanner.nextLine();
+
+System.out.println("Ingrese edad: ");
+int edad = scanner.nextInt();
+
+System.out.println("Ingrese salario: ");
+double salario = scanner.nextDouble();
+
+double salarioFinal = salario;
+
+if (edad < 16) {
+    System.out.println(nombre + " no tiene edad para trabajar.");
+} else {
+    if (edad >= 19 && edad <= 50) {
+        salarioFinal += salario * 0.05;
+    } else if (edad >= 51 && edad <= 60) {
+        salarioFinal += salario * 0.10;
+    } else if (edad > 60) {
+        salarioFinal += salario * 0.15;
+    }
+    System.out.println(nombre + " cobrará: $" + salarioFinal);
+}
+
+*/
+
+        /// 12
+/*
+        //Arreglo ya inicializado
+        int numeros[]={1,2,3,4,5};
+        int suma=0;
+        for (int i = 0; i < numeros.length; i++) {
+            suma+=numeros[i];
+        }
+
+        double promedio=(double)suma/ numeros.length;
+        System.out.println("El promedio es: " + promedio);
+
+        //Arreglo ingresado por teclado
+        System.out.print("Ingrese la cantidad de números: ");
+        int n = scanner.nextInt();
+        scanner.nextLine();
+
+        int[] numeros = new int [n];
+        int suma = 0 ;
+
+        // Llenar arreglo
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingrese el número " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+            scanner.nextLine();
+            suma += numeros[i];
+        }
+
+        double promedio = (double) suma / n;
+        System.out.println("El promedio es: " + promedio);
+
+*/
+
+        /// 13
+        /*
+        System.out.print("Ingrese un numero:");
+        int numero= scanner.nextInt();
+        scanner.nextLine();
+
+        int suma=0;
+
+        for (int i = 1; i <= numero ; i++) {
+            suma=suma+i;
+        }
+
+        System.out.println("Suma: " + suma);
+
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        int suma = numero * (numero + 1) / 2;
+
+        System.out.println("Suma: " + suma);
+*/
+
+        /// 14
 
 
-
+        
     }
 }
-}
+
