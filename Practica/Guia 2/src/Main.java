@@ -297,8 +297,37 @@ if (edad < 16) {
 
         /// 14
 
+        double[] temperaturas = new double[20];
 
-        
+        double suma = 0;
+        double max = Double.NEGATIVE_INFINITY;
+        double min = Double.POSITIVE_INFINITY;
+
+        // Lectura de temperaturas y cálculo en una sola pasada
+        for (int i = 0; i < temperaturas.length; i++) {
+            System.out.print("Ingrese la temperatura " + (i + 1) + ": ");
+            temperaturas[i] = scanner.nextDouble();
+            scanner.nextLine();
+
+            suma += temperaturas[i];
+
+            if (temperaturas[i] > max) {
+                max = temperaturas[i];
+            }
+            if (temperaturas[i] < min) {
+                min = temperaturas[i];
+            }
+        }
+
+        double promedio = suma / temperaturas.length;
+
+        System.out.println("\n--- Resultados ---");
+        System.out.println("Temperatura máxima: " + max);
+        System.out.println("Temperatura mínima: " + min);
+        System.out.println("Temperatura promedio: " + promedio);
+
+
+
     }
 }
 
