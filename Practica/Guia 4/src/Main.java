@@ -84,5 +84,7 @@ public class Main {
         libro2.mostrarDetalles();
 
         sc.close();
+
+        //ejemplo
     }
 }
