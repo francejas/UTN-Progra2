@@ -17,7 +17,9 @@ public class Libro {
         this.copias = copias;
     }
 
-    public int getId() {
+
+
+        public int getId() {
         return id;
     }
 
