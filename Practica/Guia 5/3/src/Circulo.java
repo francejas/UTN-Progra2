@@ -1,7 +1,10 @@
 public class Circulo {
+
+    // Atributos
     private double radio;
     private String color;
 
+    // Constructores
     // 1. Constructor vacío
     public Circulo() {
         this.radio = 1.0;
@@ -14,16 +17,25 @@ public class Circulo {
         this.color = color;
     }
 
-    // 3. Constructor solo radio
+    // 3. Constructor solo con radio
     public Circulo(double radio) {
         this.radio = radio;
         this.color = "rojo"; // valor por defecto
     }
 
-    // 4. Constructor solo color
+    // 4. Constructor solo con color
     public Circulo(String color) {
-        this.radio = 1.0;    // valor por defecto
+        this.radio = 1.0; // valor por defecto
         this.color = color;
+    }
+
+    // Getters y Setters
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
     }
 
     public String getColor() {
@@ -34,31 +46,15 @@ public class Circulo {
         this.color = color;
     }
 
-    public double getRadio() {
-        return radio;
-    }
-
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
-
-    public double areaCirculo(){
-        return Math.PI*(Math.pow(radio,2));
+    // Métodos
+    public double area() {
+        return Math.PI * Math.pow(radio, 2);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Circulo: [Radio=" + radio +
-                ", color=" + color +
-                ", area=" + areaCirculo() + " ].";
+                ", Color=" + color +
+                ", Área=" + area() + "].";
     }
-
-
-
-
-
-
-
-
-
 }
