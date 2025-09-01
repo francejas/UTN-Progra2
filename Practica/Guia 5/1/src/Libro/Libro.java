@@ -59,7 +59,7 @@ public class Libro {
         System.out.println("El libro, "+titulo+" de "+autor.getNombre()+" "+autor.getApellido()+". Se vende a precio $"+precio+" pesos.");
     }
 
-    // Método para incrementar stock
+    // Método para incrementar stock, diferencia entre this.stock y stock=
     public void incrementarStock(int cantidad) {
         stock += cantidad;
         System.out.println("Stock incrementado en " + cantidad + " copias.");
