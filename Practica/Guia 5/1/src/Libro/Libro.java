@@ -61,7 +61,7 @@ public class Libro {
 
     // Método para incrementar stock, diferencia entre this.stock y stock=
     public void incrementarStock(int cantidad) {
-        stock += cantidad;
+        this.stock += cantidad;
         System.out.println("Stock incrementado en " + cantidad + " copias.");
     }
 
