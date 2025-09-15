@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -45,14 +44,18 @@ public class Main {
                 case 5:
                     System.out.println("Ingrese titulo de libro para actualizar precio");
                     nombre = scanner.nextLine();
-                    actualizarPrecio(inventario,nombre);
-
-
-
-
-
-
+                    actualizarPrecio(inventario,scanner,nombre);
+                    break;
                 case 6:
+                    System.out.println("Precio total: " +calcularPrecioTotal(inventario));
+                    break;
+                case 7:
+                    System.out.println("Numero total de libros en el inventario: " +inventario.size());
+                    break;
+                case 8:
+                    libroMasCaroYBarato(inventario);
+                    break;
+                    case 0:
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
@@ -60,7 +63,7 @@ public class Main {
 
             }
 
-} while (opcion!=6);
+} while (opcion!=0);
         scanner.close();
 
 
@@ -142,7 +145,54 @@ public static void buscarLibro(ArrayList<Libro> inventario, String nombre){
     if (!encontrado) System.out.println("Libro no encontrado.");
 }
 
-public static void actualizarPrecio()
+public static void actualizarPrecio(ArrayList<Libro> inventario,Scanner scanner, String nombre){
+    boolean encontrado = false;
+        for (Libro aux:inventario){
+        if (aux.getTitulo().equalsIgnoreCase(nombre)){
+            encontrado=true;
+            System.out.println("Ingrese precio nuevo:");
+            double precioNuevo=scanner.nextDouble();
+            scanner.nextLine();
+            aux.setPrecio(precioNuevo);
+            System.out.println("Precio actualizado correctamente.");
+        }
+    }
+    if (!encontrado) System.out.println("Libro no encontrado.");
+}
+
+public static double calcularPrecioTotal(ArrayList<Libro> inventario){
+    double precioTotal=0;
+        for (Libro aux: inventario){
+        precioTotal += aux.getPrecio();
+        }
+        return precioTotal;
+}
+
+public static void libroMasCaroYBarato(ArrayList<Libro> inventario){
+        Libro libroCaro = inventario.get(0);
+        Libro libroBarato = inventario.get(0);
+        if(!inventario.isEmpty()){
+            for (Libro aux : inventario){
+                if (libroCaro.getPrecio()< aux.getPrecio()){
+                    libroCaro = aux;
+                }
+                if (libroBarato.getPrecio()>aux.getPrecio()){
+                    libroBarato = aux;
+                }
+            }
+        } else {
+            System.out.println("No hay libros en el inventario.");
+        }
+
+    System.out.println("Libro más caro: " + libroCaro);
+    System.out.println("Libro más barato: " + libroBarato);
+
+
+}
+
+
+
+
 
 
 
