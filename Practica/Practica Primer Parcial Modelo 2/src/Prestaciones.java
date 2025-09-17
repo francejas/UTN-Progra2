@@ -1,0 +1,8 @@
+public enum Prestaciones {
+    AIRE_ACONDICIONADO,
+    ABS,
+    AIRBAGS,
+    BLUETOOTH,
+    SENSOR_ESTACIONAMIENTO,
+    TECHO_CORREDIZO
+}
