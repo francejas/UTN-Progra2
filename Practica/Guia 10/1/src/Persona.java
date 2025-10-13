@@ -37,14 +37,16 @@ public class Persona {
     }
 
     // 3. CONSTRUCTOR CON TODOS LOS ATRIBUTOS
-    public Persona(String nombre, int edad, String DNI, char sexo, double peso, double altura) {
+    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
-        this.DNI = DNI;
+        this.generarDNI();
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
     }
+
+
 
     public String getNombre() {
         return nombre;
