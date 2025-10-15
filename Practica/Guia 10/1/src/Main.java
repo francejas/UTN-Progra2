@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +37,26 @@ public class Main {
         persona3.setPeso(65.0);
         persona3.setAltura(1.68);
 
+        HashMap<String, Persona> registroPersonas = new HashMap<>();
 
+        registroPersonas.put(persona1.getDNI(), persona1);
+        registroPersonas.put(persona2.getDNI(), persona2);
+        registroPersonas.put(persona3.getDNI(), persona3);
 
+        for (Persona p : registroPersonas.values()) {
+            int resultado = p.calcularIMC();
+            String mensaje;
+            if (resultado == Persona.BAJO_PESO) {
+                mensaje = "está por **debajo de su peso ideal** (Resultado: -1).";
+            } else if (resultado == Persona.PESO_IDEAL) {
+                mensaje = "está en su **peso ideal** (Resultado: 0).";
+            } else {
+                mensaje = "tiene **sobrepeso** (Resultado: 1).";
+            }
+
+            System.out.println(p.getNombre() + " (DNI: " + p.getDNI() + "): " + mensaje);
+        }
+
+        sc.close();
     }
 }

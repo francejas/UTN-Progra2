@@ -147,4 +147,17 @@ public class Persona {
         return letras.charAt(indice);
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", DNI='" + DNI + '\'' +
+                ", sexo=" + sexo +
+                ", peso=" + peso + " kg" +
+                ", altura=" + altura + " m" +
+                '}';
+    }
+
+
 }
