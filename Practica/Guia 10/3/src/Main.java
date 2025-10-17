@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println("\n--- 2. TreeMap (Ordenado por DNI) ---");
 
-        // Iteramos sobre el Map. Al ser un TreeMap, la iteración sigue el orden de las claves (DNI)
+
         for (Map.Entry<String, PersonaBis> entry : treeMapPersonas.entrySet()) {
             System.out.println("DNI: " + entry.getKey() + " -> " + entry.getValue());
         }
