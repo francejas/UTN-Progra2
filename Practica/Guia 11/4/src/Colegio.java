@@ -49,7 +49,7 @@ public class Colegio {
     }
 
     public void verTodos(){
-        
+
     }
 
 
