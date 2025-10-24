@@ -1,8 +1,11 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        /*
         // Objeto Scanner para leer la entrada del usuario
         Scanner scanner = new Scanner(System.in);
         int numero1 = 0;
@@ -55,5 +58,51 @@ public class Main {
         System.out.println("Dividendo: " + numero1);
         System.out.println("Divisor: " + numero2);
         System.out.printf("El resultado de la división es: %.2f%n", resultado);
+    }
+
+
+         */
+
+        Scanner scanner = new Scanner(System.in);
+        int dividendo = 0;
+        int divisor = 0;
+        boolean entradaValida = false;
+
+        System.out.println("--- División de Números Enteros ---");
+
+        // Bucle para asegurar que el usuario ingrese números válidos
+        while (!entradaValida) {
+            try {
+                System.out.print("Ingrese el dividendo (primer número): ");
+                dividendo = scanner.nextInt();
+
+                System.out.print("Ingrese el divisor (segundo número): ");
+                divisor = scanner.nextInt();
+
+                entradaValida = true; // Si llegamos aquí, la lectura es exitosa
+
+            } catch (InputMismatchException e) {
+                // Manejo de la excepción si el usuario ingresa texto en lugar de un entero
+                System.out.println("❌ ERROR: Por favor, ingrese solo números enteros.");
+                scanner.nextLine(); // Limpiar el buffer del Scanner
+            }
+        }
+
+        // --- Bloque principal para la división y manejo de ArithmeticException ---
+        try {
+            // Java lanza automáticamente ArithmeticException si el divisor es 0
+            int resultado = dividendo / divisor;
+            System.out.println("\n✅ El resultado de la división es: " + resultado);
+
+        } catch (ArithmeticException e) {
+            // Capturamos la excepción lanzada por el sistema (JVM)
+            System.out.println("\n❌ ERROR DE EJECUCIÓN: No se puede dividir por cero.");
+            System.out.println("Detalles de la excepción: " + e.getMessage());
+        } finally {
+            scanner.close();
+            System.out.println("\nFin del programa.");
+        }
+
+
     }
 }
