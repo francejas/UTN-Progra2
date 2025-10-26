@@ -53,7 +53,7 @@ public class Main {
 */
 
 
-        /// Otra forma
+        /// Otra forma todo dentro de un bucle
 
 
         Scanner scanner = new Scanner(System.in);
