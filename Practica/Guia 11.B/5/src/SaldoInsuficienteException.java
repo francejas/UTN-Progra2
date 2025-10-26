@@ -6,7 +6,6 @@ public class SaldoInsuficienteException extends Exception {
     }
 
     // Opcional: Sobrescribir getMessage() para asegurar que la causa siempre se incluya.
-    // La versión original de tu código repetía "Saldo insuficiente", la simplificamos aquí:
     @Override
     public String getMessage() {
         return super.getMessage();
