@@ -1,0 +1,24 @@
+{
+    "codigo": 112323,
+    "nombreCurso": "Programacion 2",
+    "alumnosInscriptos": [
+        {
+            "sexo": "femenino",
+            "nombre": "Maria",
+            "edad": 12,
+            "dni": "47848983"
+        },
+        {
+            "sexo": "masculino",
+            "nombre": "Marcos",
+            "edad": 14,
+            "dni": "46343243"
+        },
+        {
+            "sexo": "femenino",
+            "nombre": "Julia",
+            "edad": 17,
+            "dni": "45434343"
+        }
+    ]
+}
