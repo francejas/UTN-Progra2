@@ -1,0 +1,65 @@
+Apartado 1: DISEÑO DE CLASES y COLECCIONES (15 / 30 pts)
+
+Hay muchas cosas sin hacer o con errores:
+
+* Los nombres de las clases van en singular
+
+* Actor y Director tenian que tener equals() y hashCode(), sino luego no funciona bien la coleccion Set
+
+* El método compareTo de la peli no funciona, siempre retorna 0. Tampoco es necesario porque el Map se ordena por la Key, que ya tiene su metodo compareTo.
+
+* El Map no queda ordenado porque usaste el id como String en vez de como int como se pidió, y los String se ordenan por el codigo ascii y posicion por posicion, no numericamente como los numeros
+
+* mostrar el Map: sin hacer
+
+* buscar una Película por su id: manejo incorrecto de nullPointerException
+
+* buscar una Película por su nombre: sin hacer
+
+* eliminar una Película por su id: al remove hay que pasarle directamente el id
+
+* eliminar una Película por su nombre: sin hacer
+
+
+
+Apartado 2: CLASES Y MÉTODOS GENÉRICOS (20  / 23 pts.)
+
+* métodos mostrar datos del listado: sin hacer
+
+ 
+
+Apartado 3: MANEJO DE EXCEPCIONES (10 / 20 pts)
+
+* Mal manejada la excepcion: 
+
+* Falta throws en el encabezado del metodo
+
+* El try y catch no puede estar en el mismo método que la lanza
+
+* para mostrar el error se hace sout de e.getMessage(), no e.toString (quer ademas no muestra nada si no hacés el sout)
+
+* Mal analizado el tema del año, también era válido aceptar pelis del año anterior al del festival (y ademas el Festival no tiene año porque lo creaste con el constructor vacio)
+
+
+
+Apartado 4: JSON Y ARCHIVOS (14/16 puntos) y EXCEPCIONES RELACIONADAS (5 / 5 pts)
+
+* La clase OperacionesLectoEscritura tiene un método que no fue pedido ni necesita este proyecto
+
+* El nombre del archivo debe ingresar por parametro, no definirlo de entrada sin posibilidad de usar otro
+
+
+
+Apartado 5: IMPLEMENTACION EN EL MAIN (3/ 6 pts)
+
+Faltaron varias cosas:
+
+* mostrar las pelis, 
+
+* Buscar y mostrar una película por su id.
+
+¨* Buscar y mostrar una película por su nombre.
+
+*  Eliminar una película por su nombre.
+
+* Mostrar el listado de Películas, el de Actopres y el de Directores para corroborar las eliminaciones.
